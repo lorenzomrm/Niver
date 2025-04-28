@@ -5,67 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>F</title>
   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       text-align: center;
+      background-color: #627d63;
     }
-    h1 {
+    h1 {      
       background-color: #627d63;
       color: #ffbd59;
       padding: 20px;
+      border: #ffbd59;
+      border-style: dotted;
     }
-    .carousel {
-      display: flex;
-      overflow: hidden;
-      width: 80%;
-      margin: 20px auto;
-      border: 2px solid #ddd;
-      border-radius: 10px;
-    }
-    .carousel img {
-      min-width: 100%;
-      transition: transform 0.5s ease-in-out;
-    }
+
     .map-container {
       margin: 20px auto;
       width: 80%;
       height: 300px;
-      border: 2px solid #ddd;
-      border-radius: 10px;
     }
+
     iframe {
-      width: 100%;
-      height: 150%;
+      width: 80%;
+      height: 160%;
       border: none;
+    }
+    a{
+      color: #ffbd59;
+    }
+    a:hover{
+      color: #d59536;
+    }
+    img{
+      margin-top: 20px;
+      width: 64%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
   <h1>🎉 Festa Surpresa do Iran 🎉</h1>
-  
-  <div class="carousel" id="carousel">
-    <img src="https://via.placeholder.com/800x400?text=Picture+1" alt="Picture 1">
-    <img src="https://via.placeholder.com/800x400?text=Picture+2" alt="Picture 2">
-    <img src="https://via.placeholder.com/800x400?text=Picture+3" alt="Picture 3">
-  </div>
-
+  <figure>
+    <img src="img/convite.png" alt="Convite">
+  </figure>
   <div class="map-container">
+    <h2 style="border:0; padding-bottom: 10px;"><a href="https://api.whatsapp.com/send?phone=48996231506&text=Ol%C3%A1%21%20Gostaria%20de%20confirmar%20a%20presen%C3%A7a%20no%20anivers%C3%A1rio%20do%20Iran.">Clique aqui para confirmar a presença!</a></h2>
+    <h2><a href="https://maps.app.goo.gl/tVG32QLxjv7tF3vQ6">Clique aqui para acessar o local</a></h2>
+    <br>
     <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d877.9237593571252!2d-49.06613673037356!3d-28.337829318096684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1745850087185!5m2!1spt-BR!2sbr" 
-    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1745851773141!6m8!1m7!1snN1EU6EY9ubknbkb5x_RTQ!2m2!1d-28.32823568765042!2d-49.06385477674849!3f112.05921!4f0!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1075.9605321611116!2d-49.065706691739564!3d-28.33758673725891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDIwJzE2LjAiUyA0OcKwMDMnNTUuNSJX!5e1!3m2!1spt-BR!2sbr!4v1745861569417!5m2!1spt-BR!2sbr" 
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>    
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1745851773141!6m8!1m7!1snN1EU6EY9ubknbkb5x_RTQ!2m2!1d-28.32823568765042!2d-49.06385477674849!3f112.05921!4f0!5f0.7820865974627469" 
+    width="600" height="450" style="border:0; padding-bottom: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-
-  <script>
-    const carousel = document.getElementById('carousel');
-    let index = 0;
-
-    setInterval(() => {
-      index = (index + 1) % carousel.children.length;
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000); // Change slide every 3 seconds
-  </script>
+  <div></div>
+<br>
 </body>
 </html>
