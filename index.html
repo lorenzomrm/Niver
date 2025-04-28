@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #ffcccb;
+      color: #333;
+      padding: 20px;
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 80%;
+      margin: 20px auto;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+    .carousel img {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .map-container {
+      margin: 20px auto;
+      width: 80%;
+      height: 300px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Surprise Birthday Party 🎉</h1>
+  
+  <div class="carousel" id="carousel">
+    <img src="https://via.placeholder.com/800x400?text=Picture+1" alt="Picture 1">
+    <img src="https://via.placeholder.com/800x400?text=Picture+2" alt="Picture 2">
+    <img src="https://via.placeholder.com/800x400?text=Picture+3" alt="Picture 3">
+  </div>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093746!2d144.95373531569748!3d-37.81627917975151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c1e1f1b8b820!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614318674052!5m2!1sen!2sau" 
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % carousel.children.length;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000); // Change slide every 3 seconds
+  </script>
+</body>
+</html>
